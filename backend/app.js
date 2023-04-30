@@ -56,5 +56,4 @@ server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-console.log(`Backend running on http://localhost:${PORT}`);
 
