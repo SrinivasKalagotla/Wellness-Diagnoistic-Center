@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../environment';
+
 import {
   HttpRequest,
   HttpHandler,
@@ -16,7 +18,8 @@ export class ApiInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
     const apiReq = request.clone({
-      url: `http://localhost:3000${request.url}`,
+      //url: `http://localhost:3000${request.url}`,
+      url: `${environment.apiUrl}${request.url}`,
     });
     return next.handle(apiReq);
   }
