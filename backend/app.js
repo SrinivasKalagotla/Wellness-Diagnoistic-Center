@@ -4,6 +4,7 @@ const cors = require('cors');
 const authRoutes = require('./authRoutes');
 const billRoutes = require('./routes/bill.route');
 const http = require('http');
+const path = require('path');
 
 
 // Connect to MongoDB
@@ -24,6 +25,12 @@ app.use(cors({
 app.use('/api/auth', authRoutes);
 
 app.use('/api/bills', billRoutes);
+
+//Heroku Angular FrontEnd
+app.use(express.static(path.join(__dirname, 'public')));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+});
 
 // Listen for the connection open event
 mongoose.connection.on('open', () => {
@@ -48,3 +55,5 @@ const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
