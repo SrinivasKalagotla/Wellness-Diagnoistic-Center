@@ -1,0 +1,14 @@
+<header>
+  <nav class="navbar navbar-expand-lg bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="../../assets/logo.jpg" alt="Your Logo" height="60" (click)="onLogoClick()">
+      </a>
+      <div *ngIf="(isLoggedIn | async)">
+        <button class="btn btn-primary" style="margin: 5px;" (click)="navAddBills()">Add Bills</button>
+        <button class="btn btn-primary" style="margin: 5px;" (click)="navViewBills()">View Bills</button>
+        <button class="btn btn-primary" (click)="onLogoClick()" style="margin: 5px;">Logout</button>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <app-header *ngIf="authService.isLoggedIn()"></app-header>
+  <div class="app-container">
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p><strong>University of Missouri, Columbia</strong></p>
+        </div>
+        <div class="col-md-6 text-right">
+          <p><strong>Team Members: Srinivas Kalagotla, Pravarsha Vantipalli, Sriharsha Askani</strong> </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

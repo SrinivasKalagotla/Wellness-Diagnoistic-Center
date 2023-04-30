@@ -1,0 +1,26 @@
+.warn{
+    color: red;
+}
+.add-background {
+    background: linear-gradient(to bottom, #5dd39e, #348f50);
+    min-height: calc(100vh - 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .container {
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  button[type="submit"] {
+    background-color: #348f50;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
