@@ -16,7 +16,8 @@ export class ApiInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
     const apiReq = request.clone({
-      url: `http://localhost:45354${request.url}`,
+      // url: `http://localhost:3000${request.url}`, For localhost
+      url: `${request.url}`, //FOr Heroku
     });
     return next.handle(apiReq);
   }

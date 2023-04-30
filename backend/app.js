@@ -17,10 +17,12 @@ mongoose.connect('mongodb+srv://skalagotla98:Nani%40284577@srinivas.2mvz68u.mong
 const app = express();
 app.use(express.json());
 
-app.use(cors({
+/*app.use(cors({
   origin: 'https://wellness-portal.herokuapp.com',
   credentials: true,
-}));
+}));*/
+
+app.use(cors);
 
 app.use('/api/auth', authRoutes);
 
@@ -51,7 +53,7 @@ app.get('/', (req, res) => {
 const server = http.createServer(app);
 
 // Start the server
-const PORT = 45354;
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
