@@ -51,7 +51,7 @@ app.get('/', (req, res) => {
 const server = http.createServer(app);
 
 // Start the server
-const PORT = process.env.PORT || 3000;
+const PORT = 45354;
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
