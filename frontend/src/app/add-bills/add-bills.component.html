@@ -6,7 +6,10 @@
         <form (ngSubmit)="addBill()">
           <div class="form-group">
             <label for="patientName">Patient Name</label>
-            <input type="text" class="form-control" id="patientName" [(ngModel)]="patientName" name="patientName" required>
+            <input type="text" class="form-control" id="patientName" [(ngModel)]="patientName"  name="patientName"  required  (mouseover)="showHintMessage('patientNameHint')"  (mouseout)="hideHintMessage('patientNameHint')"  (input)="hideHintMessage('patientNameHint')" />
+            <div id="patientNameHint" class="hint-message">
+              Pipes are used here to capitalize the patient's name.
+            </div>
           </div>
           <br>
           <div class="form-group">
@@ -16,10 +19,22 @@
           <br>
           <div class="form-group">
             <label for="subject">Select Test Type</label>
-            <select id="subject" class="form-control" [(ngModel)]="selectedSubject" (change)="onChangeSubject()" name="subject" required>
+            <select
+              id="subject"
+              class="form-control"
+              [(ngModel)]="selectedSubject"
+              (change)="onChangeSubject()"
+              name="subject"
+              required
+              (mouseover)="showHintMessage('subjectHint')"
+              (mouseout)="hideHintMessage('subjectHint')"
+            >
               <option [ngValue]="null" disabled>Test Type</option>
               <option *ngFor="let subject of subjects" [ngValue]="subject">{{ subject.name }}</option>
             </select>
+            <div id="subjectHint" class="hint-message">
+              Subjects are used here to group tests by type.
+            </div>
           </div>
           <br>
           <div class="form-group">

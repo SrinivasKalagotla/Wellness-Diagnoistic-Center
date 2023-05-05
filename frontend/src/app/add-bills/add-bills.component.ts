@@ -93,4 +93,20 @@ export class AddBillsComponent implements OnInit {
       this.availableTests = [];
     }
   }
+
+  showHintMessage(hintMessageId: string) {
+    const hintMessage = document.getElementById(hintMessageId);
+    if (hintMessage) {
+      hintMessage.style.display = 'block';
+    }
+  }
+  
+  hideHintMessage(hintMessageId: string) {
+    const hintMessage = document.getElementById(hintMessageId);
+    if (hintMessage) {
+      hintMessage.style.display = 'none';
+    }
+  }
+  
+  
 }
