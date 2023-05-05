@@ -14,7 +14,6 @@ const billSchema = new Schema({
     balance: { type: Number, required: true },
     date: { type: Date, required: true },
   });
-  
 
 const Bill = mongoose.model('bills', billSchema);
 module.exports = Bill;
