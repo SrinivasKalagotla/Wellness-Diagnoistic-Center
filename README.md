@@ -29,11 +29,11 @@ system. Authentication will be implemented using a login page with a username an
 password field. Only authenticated users will be allowed to add and view lab test bill details.
 
 # Extra Credit Requirements:
-1. Subjects (5 points): Subjects can be added to the system to organize lab tests by category.
-2. Login Authentication (10 points): User authentication will be implemented to ensure only
+1. Subjects : Subjects can be added to the system to organize lab tests by category.
+2. Login Authentication : User authentication will be implemented to ensure only
 authorized users can access the system.
-3. Pipe (5 points): Angular pipes will be implemented to transform data for display.
-4. Filter (5 points): Angular filters will be implemented to filter data based on user input.
+3. Pipe : Angular pipes will be implemented to transform data for display.
+4. Filter : Angular filters will be implemented to filter data based on user input.
 
 
   In summary, the proposed web application will enable Wellness Diagnostic Center to manage
