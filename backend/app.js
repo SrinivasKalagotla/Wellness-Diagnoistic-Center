@@ -8,7 +8,7 @@ const path = require('path');
 
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://skalagotla98:Nani%40284577@srinivas.2mvz68u.mongodb.net/srinivas', {
+mongoose.connect('URL', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
